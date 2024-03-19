@@ -2,6 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 from urllib.parse import unquote, quote
+import platform  # To determine the operating system
+try:
+    import pyperclip  # Attempt to import pyperclip
+except ImportError:
+    pyperclip = None  # If import fails, set pyperclip to None
 
 def is_encoded(url):
     """
@@ -39,7 +44,12 @@ def main():
 
         if expanded_url_tag:
             expanded_url = expanded_url_tag['href']
+            print()  # Print an empty line
             print(expanded_url)
+            # Check if pyperclip is available and the OS is macOS
+            if pyperclip and platform.system() == 'Darwin':
+                pyperclip.copy(expanded_url)
+                print("URL has been copied to the clipboard.")
         else:
             print("Error: Unable to find the expanded URL in the response.")
     except requests.exceptions.HTTPError as http_err:

@@ -36,6 +36,16 @@ files = [
 beautifulsoup4 = "*"
 
 [[package]]
+name = "pyperclip"
+version = "1.8.2"
+description = "A cross-platform clipboard module for Python. (Only handles plain text for now.)"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyperclip-1.8.2.tar.gz", hash = "sha256:105254a8b04934f0bc84e9c24eb360a591aaf6535c9def5f29d92af107a9bf57"},
+]
+
+[[package]]
 name = "soupsieve"
 version = "2.5"
 description = "A modern CSS selector implementation for Beautiful Soup."
@@ -49,4 +59,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "ff57a90afb2edf9a876b7d267317b889346cff98bef816a55f969ae05e9bbf76"
+content-hash = "4812de3d6f9fb7a4a11b1ad2b9e9dbd9e7a763a003cdf14f96749fe6d4b73bd8"
