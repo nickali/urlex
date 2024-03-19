@@ -11,6 +11,19 @@ The use case is getting the final URL of tracked links in email, especially if y
 python urlex/main.py <URL>
 ```
 
+If you want to create an alias for this in zsh, add this to your .zshrc:
+
+```zsh
+url-get() {
+  (cd ~/<PATH>/urlex && poetry run run-urlex "$@")
+}
+```
+In a new shell, you can run:
+
+```shell
+url-get <URL>
+```
+
 URL can be encoded or not.
 
 # Don't abuse it
